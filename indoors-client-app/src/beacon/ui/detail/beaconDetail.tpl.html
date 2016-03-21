@@ -1,0 +1,44 @@
+<div>
+    <button data-ui-sref="BEACON_EDIT({beaconId: $ctrl.beacon.id})" class="btn btn-default btn-xs pull-right">
+        <span class="glyphicon glyphicon-pencil"></span>
+    </button>
+
+    <h4 class="inline-header">{{$ctrl.beacon.name}}</h4>
+
+    <div>{{$ctrl.beacon.description}}</div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Vendor</th>
+            <th>Minor</th>
+            <th>Major</th>
+            <th>Installation Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{$ctrl.beacon.vendor}}</td>
+            <td>{{$ctrl.beacon.minor}}</td>
+            <td>{{$ctrl.beacon.major}}</td>
+            <td>{{$ctrl.beacon.installationDate}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>TX Power</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{$ctrl.beacon.txPower}}</td>
+            <td>{{$ctrl.beacon.geoLocation.lat}}</td>
+            <td>{{$ctrl.beacon.geoLocation.lng}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

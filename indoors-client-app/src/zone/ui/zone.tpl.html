@@ -1,0 +1,13 @@
+<div>
+    <a data-ui-sref="ZONE_EDIT" class="btn btn-default">Create New Zone</a>
+
+    <h3>All Zones</h3>
+    <ul class="well list-group">
+        <ind-zone-list-item data-ng-repeat="zone in $ctrl.zones"
+                            data-zone="zone"
+                            data-set-selected="$ctrl.setSelected(zone)"
+                            data-is-selected="$ctrl.isSelected(zone.id)"
+                            data-on-deleted="$ctrl.onDeleted(zone)"
+                            class="list-group-item"></ind-zone-list-item>
+    </ul>
+</div>

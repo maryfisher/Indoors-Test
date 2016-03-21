@@ -1,0 +1,42 @@
+<li>
+    <div class="btn-group" style="vertical-align: middle" role="group">
+        <button data-ui-sref="ZONE_EDIT({zoneId: zone.id})" class="btn btn-default btn-secondary btn-xs">
+            <span class="glyphicon glyphicon-pencil"></span>
+        </button>
+        <button data-ng-click="$ctrl.onDelete()" class="btn btn-default btn-secondary btn-xs">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
+    </div>
+    <h4 class="inline-header">{{zone.name}}</h4>
+
+    <div data-uib-collapse="!$ctrl.isSelected(zone.id)">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Description</th>
+                <th>Size</th>
+                <th>Beacon</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{zone.description}}</td>
+                <td>{{zone.size}}</td>
+                <td><a data-ui-sref="BEACON_DETAIL({beaconId: zone.beacon.id})">
+                    {{zone.beacon.name}}
+                </a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <button data-ng-click="$ctrl.setSelected(zone)" data-ng-hide="$ctrl.isSelected(zone.id)"
+                class="btn btn-default btn-xs">
+            <span class="caret"></span>
+        </button>
+        <button data-ng-click="$ctrl.setSelected(zone)" data-ng-show="$ctrl.isSelected(zone.id)"
+                class="btn btn-default dropup btn-xs">
+            <span class="caret"></span>
+        </button>
+    </div>
+</li>
